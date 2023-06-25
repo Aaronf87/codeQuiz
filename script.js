@@ -1,7 +1,7 @@
 // get element by ID into a variable in section
 // create a timer
 // create questions with multiple choice 
-let questions = [
+const questions = [
   {
     question: "Inside which HTML element do we put the JavaScript?",
     choice1: "<script>",
@@ -41,5 +41,5 @@ function myTimer() {
 
 
 window.addEventListener("click", function(){
-    document.getElementById("question-number-display").innerHTML = "Inside which HTML element do we put the JavaScript?";
+    document.getElementById("question-number-display").innerHTML = questions[0];
   });
