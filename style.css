@@ -1,6 +1,9 @@
 *{
 margin:0;
 }
+body{
+    background-image: url(images/background.jpg);
+}
  section{
     display: flex;
     align-items: center;
@@ -19,6 +22,9 @@ margin:0;
     height: 550px;
     width: 550px;
     margin:auto;
+}
+#question-number-display{
+    padding: 2rem;
 }
 button{
     box-shadow: 5px 8px 13px 0px rgba(23, 0, 0, 1);
