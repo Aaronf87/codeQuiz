@@ -5,10 +5,10 @@
 
     const question1 = {  
     question: "Inside which HTML element do we put the JavaScript?",
-    choice1: "<script>",
-    choice2: "<ahref>",
-    choice3: "<br>",
-    choice4: "<link>",
+    choice1: "A<script>",
+    choice2: "B<ahref>",
+    choice3: "C<br>",
+    choice4: "D<link>",
     Answer: "<script"
  };
   
@@ -20,15 +20,8 @@
     choice4: "5000001",
     Answer: "500001"
  };
- let questionOne = document.querySelector("#question-number-display")
-//  let questionTwo = document.querySelector("question-number-display").innerHTML = question2.question2;
+//  let questionOne = document.querySelector("#question-number-display").innerHTML = ("BACON")
 
-questionOne.addEventListener('click', e =>{
-
-
-}
-
-)
 
 // setInterval(myTimer, 1000);
 
@@ -40,6 +33,10 @@ questionOne.addEventListener('click', e =>{
 
 window.addEventListener("click", function(){
     document.getElementById("question-number-display").innerHTML = question1.question;
+    document.querySelector("#q1").innerHTML = ("<button>A: script tag</button>");
+    document.getElementById("q2").innerHTML = ("<button>B: ahref tag</button>");
+    document.getElementById("q3").innerHTML = ("<button>C: br</button>");
+    document.getElementById("q4").innerHTML =(" <button>D: link</button>");
+
   });
 
-  console.log(question1.question);
