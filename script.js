@@ -1,42 +1,43 @@
 // get element by ID into a variable in section
 // create a timer
 // create questions with multiple choice 
+let question1 = [ {
+     question: "Inside which HTML element do we put the JavaScript? ",
+     choices: ["script", "link", "ahref", "br"],
+     correct: "script",
+   },
+   {
+     question: "Which of the following keywords is used to define a variable in Javascript?",
+     choices: ["var", "let", "both", "none of the above"],
+     correct: "both",
+   },
+   {
+     question: "How can a datatype be declared to be a constant type?",
+     choices: ["const","var","let","constant",],
+     correct: "cont",
+   },
+  ];
 
-
-    const question1 = {  
-    question: "Inside which HTML element do we put the JavaScript?",
-    choice1: "A<script>",
-    choice2: "B<ahref>",
-    choice3: "C<br>",
-    choice4: "D<link>",
-    Answer: "<script"
- };
   
-    const question2 =  {
-    question2: "what will the console output, console.log(500000 + 1)?",
-    choice1: "600000",
-    choice2: "500000 + 1",
-    choice3: "500001",
-    choice4: "5000001",
-    Answer: "500001"
- };
-//  let questionOne = document.querySelector("#question-number-display").innerHTML = ("BACON")
+var buttonElement = document.getElementById("button");
+var questionPelement = document.getElementById("question-number-display");
+var c1 = document.getElementById("c1");
+var c2 = document.getElementById("c2");
+var c3 = document.getElementById("c3");
+var c4 = document.getElementById("c4");
 
 
-// setInterval(myTimer, 1000);
 
-// function myTimer() {
-//   const d = new Date();
-//   document.getElementById("time").innerHTML = d.toLocaleTimeString();
-// }
-
-
-window.addEventListener("click", function(){
-    document.getElementById("question-number-display").innerHTML = question1.question;
-    document.querySelector("#q1").innerHTML = ("<button>A: script tag</button>");
-    document.getElementById("q2").innerHTML = ("<button>B: ahref tag</button>");
-    document.getElementById("q3").innerHTML = ("<button>C: br</button>");
-    document.getElementById("q4").innerHTML =(" <button>D: link</button>");
+buttonElement.addEventListener("click", function(){
+   // syntax used to acess the array object index 0
+   questionPelement.innerHTML = question1[0].question;
+                 c1.innerHTML = question1[0].choices[0];
+                 c2.innerHTML = question1[0].choices[1];
+                 c3.innerHTML = question1[0].choices[2];
+                 c4.innerHTML = question1[0].choices[3];
+  
+    console.log(question1[0].question);
+    console.log(question1[0].choices);
 
   });
 

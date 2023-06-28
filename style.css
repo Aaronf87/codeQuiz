@@ -19,8 +19,8 @@ body{
     box-shadow: 5px 8px 13px 0px rgba(23, 0, 0, 1);
     border-radius: 25px;
     background-color: blue;
-    height: 550px;
-    width: 550px;
+    height: 650px;
+    width: 650px;
     margin:auto;
 }
 #question-number-display{
@@ -32,4 +32,7 @@ button{
     height: 3rem;
     width:max-content
 
+}
+#questions-list{
+    display: block;
 }
