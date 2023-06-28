@@ -68,6 +68,7 @@ function questionWhich() {
    c2.innerHTML = question1[1].choices[1];
    c3.innerHTML = question1[1].choices[2];
    c4.innerHTML = question1[1].choices[3];
+   buttonElement2.innerText = ("Next question")
   };
  function questionHow() {
    // syntax used to acess the array object index 2
@@ -76,6 +77,8 @@ function questionWhich() {
    c2.innerHTML = question1[2].choices[1];
    c3.innerHTML = question1[2].choices[2];
    c4.innerHTML = question1[2].choices[3];
+   buttonElement3.innerText = ("Next question")
+
   };
 
   function start(){
