@@ -30,6 +30,7 @@ var quiz = document.querySelector(".quiz");
 var end = document.querySelector(".end");
 var timer = document.querySelector("#time");
 var toEndScreen = document.querySelector("#to-end")
+var restart = document.querySelector("#restart")
 var seconds =  10;
 // qChoices = [questionInside,questionHow,questionWhich];
 
@@ -48,11 +49,14 @@ toEndScreen.addEventListener("click", function(){
   quiz.style.display = "none";
   end.style.display = "block";
 
-
-
 });
 
+restart.addEventListener("click", function(){
+end.style.display = "none";
+welcomeContainer.style.display = "block";
 
+})
+// timer funtion here
 function setTimer(){
 var time = setInterval(
    function(){
