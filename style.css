@@ -10,17 +10,14 @@ body{
     justify-content: space-evenly;
  }
 
-#quiz-area{
+.welcome, .quiz, .choices{
     padding: 2rem;
     font-size: 2rem;
-    display: flex; 
     text-align: center; 
     color: azure;
     box-shadow: 5px 8px 13px 0px rgba(23, 0, 0, 1);
     border-radius: 25px;
-    background-color: blue;
-    height: 650px;
-    width: 650px;
+  
     margin:auto;
 }
 #question-number-display{

@@ -1,6 +1,11 @@
 // get element by ID into a variable in section
 // create a timer
 // create questions with multiple choice 
+
+
+
+
+
 let question1 = [ {
      question: "Inside which HTML element do we put the JavaScript? ",
      choices: ["script", "link", "ahref", "br"],
@@ -19,67 +24,37 @@ let question1 = [ {
   ];
 
   
-var buttonElement = document.getElementById("button");
-var buttonElement2 = document.getElementById("button2");
-var buttonElement3 = document.getElementById("button3");
-var questionPelement = document.getElementById("question-number-display");
-var c1 = document.getElementById("c1");
-var c2 = document.getElementById("c2");
-var c3 = document.getElementById("c3");
-var c4 = document.getElementById("c4");
-qChoices = [questionInside,questionHow,questionWhich];
+var startButton = document.getElementById("start-btn");
+var welcomeContainer = document.querySelector(".welcome");
+var quiz = document.querySelector(".quiz");
+var end = document.querySelector(".end");
+var  timer = document.querySelector("#time");
+var seconds =  10;
+// qChoices = [questionInside,questionHow,questionWhich];
 
-// let qInside = function questionInside() {
-//  // syntax used to acess the array object index 0
-//  questionPelement.innerHTML = question1[0].question;
-//  c1.innerHTML = question1[0].choices[0];
-//  c2.innerHTML = question1[0].choices[1];
-//  c3.innerHTML = question1[0].choices[2];
-//  c4.innerHTML = question1[0].choices[3];
-// };
-// let qWhich = function questionWhich() {
-//  // syntax used to acess the array object index 1
-//  questionPelement.innerHTML = question1[1].question;
-//  c1.innerHTML = question1[1].choices[0];
-//  c2.innerHTML = question1[1].choices[1];
-//  c3.innerHTML = question1[1].choices[2];
-//  c4.innerHTML = question1[1].choices[3];
-// };
-// let qHow = function questionHow() {
-//  // syntax used to acess the array object index 2
-//  questionPelement.innerHTML = question1[2].question;
-//  c1.innerHTML = question1[2].choices[0];
-//  c2.innerHTML = question1[2].choices[1];
-//  c3.innerHTML = question1[2].choices[2];
-//  c4.innerHTML = question1[2].choices[3];
-// };
-function questionInside() {
-   // syntax used to acess the array object index 0
-   questionPelement.textContent = question1[0].question;
-   c1.innerHTML = question1[0].choices[0];
-   c2.innerHTML = question1[0].choices[1];
-   c3.innerHTML = question1[0].choices[2];
-   c4.innerHTML = question1[0].choices[3];
-  };
-function questionWhich() {
-   // syntax used to acess the array object index 1
-   questionPelement.innerHTML = question1[1].question;
-   c1.innerHTML = question1[1].choices[0];
-   c2.innerHTML = question1[1].choices[1];
-   c3.innerHTML = question1[1].choices[2];
-   c4.innerHTML = question1[1].choices[3];
-   buttonElement2.innerText = ("Next question")
-  };
- function questionHow() {
-   // syntax used to acess the array object index 2
-   questionPelement.innerHTML = question1[2].question;
-   c1.innerHTML = question1[2].choices[0];
-   c2.innerHTML = question1[2].choices[1];
-   c3.innerHTML = question1[2].choices[2];
-   c4.innerHTML = question1[2].choices[3];
-   buttonElement3.innerText = ("Next question")
+quiz.style.display = "none";
+end.style.display = "none";
 
-  };
+startButton.addEventListener("click", function() {
+welcomeContainer.style.display = "none";
+quiz.style.display = "block";
+setTimer();
+})
+
+function setTimer(){
+var time = setInterval(
+   function(){
+      seconds--;
+      console.log(seconds);
+      timer.innerHTML = seconds;
+      if (seconds == 0){
+         clearInterval(time);
+      }
+   }
+,1000)
+
+}
+
 
   function start(){
    if (true) {
@@ -93,7 +68,5 @@ function qArray(){
    qArray();
 }
 
-buttonElement.addEventListener("click", questionInside);
-buttonElement2.addEventListener("click", questionWhich);
-buttonElement3.addEventListener("click", questionHow);
 
+console.log(question1.question);
