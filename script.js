@@ -1,7 +1,7 @@
 // get element by ID into a variable in section
 // create a timer
 // create questions with multiple choice 
-
+// create a for loop to cycle between questions and chocies
 
 
 
@@ -23,7 +23,8 @@ let question1 = [ {
    },
   ];
 
-  
+var questionOne = document.getElementById("questions-list");
+var choices = document.getElementById("choices")
 var startButton = document.getElementById("start-btn");
 var welcomeContainer = document.querySelector(".welcome");
 var quiz = document.querySelector(".quiz");
@@ -32,8 +33,9 @@ var timer = document.querySelector("#time");
 var toEndScreen = document.querySelector("#to-end")
 var restart = document.querySelector("#restart")
 var seconds =  10;
-// qChoices = [questionInside,questionHow,questionWhich];
 
+questionOne.innerHTML = (question1[0].question);
+choices.innerHTML = (question1[0].choices);
 // current display on first window
 quiz.style.display = "none";
 end.style.display = "none";
@@ -43,7 +45,7 @@ welcomeContainer.style.display = "none";
 quiz.style.display = "block";
 setTimer();
 });
-// place new function here 
+// place new functions here 
 
 toEndScreen.addEventListener("click", function(){
   quiz.style.display = "none";
@@ -65,6 +67,7 @@ var time = setInterval(
       timer.innerHTML = seconds;
       if (seconds == 0){
          clearInterval(time);
+         welcomeContainer.style.display = "none";
          quiz.style.display = "none";
          end.style.display = "block";
         clearInterval();
@@ -74,5 +77,7 @@ var time = setInterval(
 
 }
 
-
-
+for (let i = 0; i < question1.length; i++){
+  question1[i].question;
+  console.log(question1[i].question);
+}
