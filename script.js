@@ -56,17 +56,4 @@ var time = setInterval(
 }
 
 
-  function start(){
-   if (true) {
-   
-function qArray(){
-   for(let i in qChoices){
-      return qChoices[i];
 
-   }}
-}
-   qArray();
-}
-
-
-console.log(question1.question);
