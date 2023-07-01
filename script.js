@@ -65,7 +65,10 @@ var time = setInterval(
       timer.innerHTML = seconds;
       if (seconds == 0){
          clearInterval(time);
-      }
+         quiz.style.display = "none";
+         end.style.display = "block";
+        clearInterval();
+      seconds = 10;      }
    }
 ,1000)
 
