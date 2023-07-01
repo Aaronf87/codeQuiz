@@ -10,7 +10,7 @@ body{
     justify-content: space-evenly;
  }
 
-.welcome, .quiz, .choices{
+.welcome, .quiz, .choices, .end{
     padding: 2rem;
     font-size: 2rem;
     text-align: center; 
@@ -29,7 +29,4 @@ button{
     height: 3rem;
     width:max-content
 
-}
-#questions-list{
-    display: block;
 }

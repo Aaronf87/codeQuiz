@@ -28,10 +28,12 @@ var startButton = document.getElementById("start-btn");
 var welcomeContainer = document.querySelector(".welcome");
 var quiz = document.querySelector(".quiz");
 var end = document.querySelector(".end");
-var  timer = document.querySelector("#time");
+var timer = document.querySelector("#time");
+var toEndScreen = document.querySelector("#to-end")
 var seconds =  10;
 // qChoices = [questionInside,questionHow,questionWhich];
 
+// current display on first window
 quiz.style.display = "none";
 end.style.display = "none";
 
@@ -39,7 +41,17 @@ startButton.addEventListener("click", function() {
 welcomeContainer.style.display = "none";
 quiz.style.display = "block";
 setTimer();
-})
+});
+// place new function here 
+
+toEndScreen.addEventListener("click", function(){
+  quiz.style.display = "none";
+  end.style.display = "block";
+
+
+
+});
+
 
 function setTimer(){
 var time = setInterval(
