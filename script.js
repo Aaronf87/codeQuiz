@@ -20,35 +20,66 @@ let question1 = [ {
      question: "How can a datatype be declared to be a constant type?",
      choices: ["const","var","let","constant",],
      correct: "cont",
-   },
+    },
   ];
+  
+  var questions = document.getElementById("questions-list");
+  var choices = document.getElementById("choices")
+  var startButton = document.getElementById("start-btn");
+  var welcomeContainer = document.querySelector(".welcome");
+  var quiz1 = document.querySelector(".quiz1");
+  var quiz2 = document.querySelector(".quiz2");
+  var quiz3 = document.querySelector(".quiz3");
+  var end = document.querySelector(".end");
+  var next1  = document.querySelector("#next1");
+  var next2  = document.querySelector("#next2");
+  var timer = document.querySelector("#time");
+  var toEndScreen = document.querySelector("#to-end")
+  var restart = document.querySelector("#restart")
+  var seconds =  60;
+  var stop =  end.style.display = "block";
 
-var questionOne = document.getElementById("questions-list");
-var choices = document.getElementById("choices")
-var startButton = document.getElementById("start-btn");
-var welcomeContainer = document.querySelector(".welcome");
-var quiz = document.querySelector(".quiz");
-var end = document.querySelector(".end");
-var timer = document.querySelector("#time");
-var toEndScreen = document.querySelector("#to-end")
-var restart = document.querySelector("#restart")
-var seconds =  10;
+  
+  
+  for (let i = 0; i < question1.length; i++){
+    question1[i];
+    questions.innerHTML = (question1[i].question);
+    choices.innerHTML = (question1[i].choices);
+    console.log(question1[i]);
+  }
 
-questionOne.innerHTML = (question1[0].question);
-choices.innerHTML = (question1[0].choices);
-// current display on first window
-quiz.style.display = "none";
+
+  // current display on first window
+quiz1.style.display = "none";
+quiz2.style.display = "none";
+quiz3.style.display = "none";
 end.style.display = "none";
 
 startButton.addEventListener("click", function() {
 welcomeContainer.style.display = "none";
-quiz.style.display = "block";
+quiz1.style.display = "block";
 setTimer();
+});
+
+next1.addEventListener("click", function() {
+welcomeContainer.style.display = "none";
+quiz1.style.display = "none";
+quiz2.style.display = "block";
+
+});
+
+next2.addEventListener("click", function() {
+welcomeContainer.style.display = "none";
+quiz1.style.display = "none";
+quiz2.style.display = "none";
+quiz3.style.display = "block";
 });
 // place new functions here 
 
 toEndScreen.addEventListener("click", function(){
-  quiz.style.display = "none";
+  quiz1.style.display = "none";
+  quiz2.style.display = "none";
+  quiz3.style.display = "none";
   end.style.display = "block";
 
 });
@@ -65,19 +96,19 @@ var time = setInterval(
       seconds--;
       console.log(seconds);
       timer.innerHTML = seconds;
-      if (seconds == 0){
+      if (seconds == 0|| end  == true ){
          clearInterval(time);
-         welcomeContainer.style.display = "none";
-         quiz.style.display = "none";
-         end.style.display = "block";
-        clearInterval();
-      seconds = 10;      }
-   }
+         return endScreen();
+        }}
+      // seconds = 60;       }
 ,1000)
-
 }
 
-for (let i = 0; i < question1.length; i++){
-  question1[i].question;
-  console.log(question1[i].question);
-}
+let endScreen = function endScreen() {
+  welcomeContainer.style.display = "none";
+  quiz1.style.display = "none";
+  quiz2.style.display = "none";
+  quiz3.style.display = "none";
+  end.style.display = "block";
+seconds = 60;
+};

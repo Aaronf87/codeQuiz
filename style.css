@@ -10,7 +10,7 @@ body{
     justify-content: space-evenly;
  }
 
-.welcome, .quiz, .choices, .end{
+.welcome, .quiz1, .quiz2, .quiz3, .choices, .end{
     padding: 2rem;
     font-size: 2rem;
     text-align: center; 
