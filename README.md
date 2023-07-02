@@ -16,6 +16,6 @@ Link to site
 
 https://aaronf87.github.io/codeQuiz/
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./images/Screenshot%202023-07-01%20at%2011.33.59%20PM.png)
 
 
